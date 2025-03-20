@@ -6,21 +6,21 @@
    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-   <h1>Storm Trooper</h1>
-   <strong>Feedback Form</strong>
-   <br><br>
-   <form id="feedbackForm">
-       Name: <input id="name" required type="text"><br> <!--no checks needed-->
-       Age: <input id="age" required type="number"><br> <!--checks if 18 in the JS-->
-       Phone: <input id="phone" pattern="^\d{10}$" required type="tel"><br> <!--pattern= is to make sure it is a phone number-->
-       Street: <input id="street" required><br>
-       City: <input id="city" required><br>
-       State: <input id="state" required><br>
-       Zip Code: <input id="zip" pattern="^\d{5}$" required><br> <!--pattern make it have to be 5 chars -->
-       Email: <input id="email" required type="email"><br> <!--type="email" makes it only except emails-->
-       Feedback Message: <textarea id="message"></textarea><br>
-       <button >Submit</button>
-   </form>
+    <h1>Storm Trooper</h1>
+    <strong>Feedback Form</strong>
+    <br><br>
+    <form id="feedbackForm">
+        Name: <input id="name" required type="text" placeholder="Name"><br> <!--no checks needed-->
+        Age: <input id="age" required type="number" placeholder="18 or older"><br> <!--checks if 18 in the JS-->
+        Phone: <input id="phone" pattern="^\d{10}$" required type="tel" placeholder="XXXXXXXXXX"><br> <!--pattern= is to make sure it is a phone number-->
+        Street: <input id="street" required placeholder="Street"><br>
+        City: <input id="city" required placeholder="City"><br>
+        State: <input id="state" required  placeholder="State"><br>
+        Zip Code: <input id="zip" pattern="^\d{5}$" required placeholder="XXXXX"><br> <!--pattern make it have to be 5 chars -->
+        Email: <input id="email" required type="email" placeholder="name@email.com"><br> <!--type="email" makes it only except emails-->
+        Feedback Message: <textarea id="message"></textarea><br>
+        <button >Submit</button>
+    </form>
 
 
    <script src="index.js"></script>
