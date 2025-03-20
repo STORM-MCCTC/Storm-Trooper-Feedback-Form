@@ -13,9 +13,10 @@
     <form id="feedbackForm">
       <label for="Agerequired"></label>
       <label for="nospecialnonum"></label>
-        Name: <input id="name" required type="text" placeholder="Name" pattern="[A-Za-z]{3,20}" title="No Special Characters, No Numbers"><br> <!--no checks needed-->
-        Age: <input id="age" id="Agerequired" type="number" min="18" max="100" placeholder="18 or older"><br> <!--checks if 18 in the JS-->
-        Phone: <input id="phone" pattern="^\d{10}$" required type="tel" placeholder="XXXXXXXXXX"><br> <!--pattern= is to make sure it is a phone number-->
+      <label for="phone"></label>
+        Name: <input id="name" required type="text" placeholder="Name" pattern="[A-Za-z]{3,20}" title="No Special Characters, No Numbers" required><br> <!--no checks needed-->
+        Age: <input id="age" id="Agerequired" type="number" min="18" max="100" placeholder="18 or older" required><br> <!--checks if 18 in the JS-->
+        Phone: <input id="phone" name="phone" pattern="^\d{10}$" required type="tel" placeholder="123-456-7890 (Not Required)" pattern="[0,9]{3}-[0,9]{3}-[0,9]{4}" ><br> <!--pattern= is to make sure it is a phone number-->
         Street: <input id="street" required placeholder="Street"><br>
         City: <input id="city" required placeholder="City"><br>
         State: <input id="state" required  placeholder="State"><br>
@@ -23,8 +24,7 @@
         Email: <input id="email" required type="email" placeholder="name@email.com"><br> <!--type="email" makes it only except emails-->
         Feedback Message: <textarea id="message"></textarea><br>
         <button >Submit</button>
-    </form>
-
+      </form>
 
    <script src="index.js"></script>
 </body>
