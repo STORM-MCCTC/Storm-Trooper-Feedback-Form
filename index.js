@@ -12,6 +12,14 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     
+    if(email  === ''|| !/^([a-Za-Z0-9._%-]+\.[a-zA-Z]{2,6})*$/.test(email)){
+        alert("Please complete all the fields");
+    } else {
+
+        alert("Your form has been submitted");
+        
+    }
+
     //all other checks are handled in the HTML
     if (age < 18){
         alert('you have to be 18 or older');
