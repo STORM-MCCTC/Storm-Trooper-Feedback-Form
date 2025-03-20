@@ -20,6 +20,7 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
         
     }
 
+    //all other checks are handled in the HTML
     if (age < 18){
         alert('you have to be 18 or older');
     }
