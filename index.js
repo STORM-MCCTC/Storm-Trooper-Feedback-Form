@@ -12,6 +12,7 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     
+    //all other checks are handled in the HTML
     if (age < 18){
         alert('you have to be 18 or older');
     }
