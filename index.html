@@ -13,7 +13,7 @@
     <form id="feedbackForm">
       <label for="Agerequired"></label>
       <label for="nospecialnonum"></label>
-        Name: <input id="name" required type="text" placeholder="Name" pattern="[A-Za-z]{5} title="No Special Characters, No Numbers"><br> <!--no checks needed-->
+        Name: <input id="name" required type="text" placeholder="Name" pattern="[A-Za-z]{3,20}" title="No Special Characters, No Numbers"><br> <!--no checks needed-->
         Age: <input id="age" id="Agerequired" type="number" min="18" max="100" placeholder="18 or older"><br> <!--checks if 18 in the JS-->
         Phone: <input id="phone" pattern="^\d{10}$" required type="tel" placeholder="XXXXXXXXXX"><br> <!--pattern= is to make sure it is a phone number-->
         Street: <input id="street" required placeholder="Street"><br>
