@@ -25,7 +25,7 @@ form {
 
 form:hover{
     border-style: solid;
-    border-color: white;
+    border-color: #8b0000;
 }
 
 input, textarea {
