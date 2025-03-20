@@ -1,12 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #262626;
+    background-image: url(https://images.alphacoders.com/107/107763.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
     color: white;
     text-align: center;
- }
+}
 
- form {
+form {
     background-color: #383838;
     padding: 15px;
     border-radius: 5px;
@@ -14,21 +17,38 @@ body {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
- }
+    border-width: 0px;
+    border-bottom: 5px;
+    border-right: 5px;
+    border-style: hidden;
+}
 
- input, textarea {
+form:hover{
+    border-style: solid;
+    border-color: white;
+}
+
+input, textarea {
     display: block;
     width: 400px;
     margin-bottom: 10px;
     background-color: #262626;
     border-color: #1e1e1e;
     color: #fff;
- }
+}
  
- button {
-    background-color: #66008b;
+button {
+    background-color: #8b0000;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
- }
+}
+
+button:hover {
+    background-color: #4a0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
