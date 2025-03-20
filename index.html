@@ -8,14 +8,14 @@
 <body>
    <h1>Storm Trooper Feedback Form</h1>
    <form id="feedbackForm">
-       Name: <input id="name" required><br> <!-- Hint: Add the type you want the form field to be here. Text?-->
-       Age: <input id="age"><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
-       Phone: <input id="phone"><br> <!-- Hint: Add the type you want the form field to be here. Should this be text, number or something else?-->
+       Name: <input id="name" required type="text"><br> <!-- Hint: Add the type you want the form field to be here. Text?-->
+       Age: <input id="age" required type="number"><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
+       Phone: <input id="phone" pattern="^\d{10}$" required type="tel"><br> <!-- Hint: Add the type you want the form field to be here. Should this be text, number or something else?-->
        Street: <input id="street" required><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
        City: <input id="city" required><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
-       State: <input id="state" required><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
-       Zip Code: <input id="zip"><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
-       Email: <input id="email" required><br> <!-- Hint: Add the type you want the form field to be here. Oof... what should an email be?-->
+       State: <input id="state" required type=""><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
+       Zip Code: <input id="zip" pattern="^\d{5}$" required><br> <!-- Hint: Add the type you want the form field to be here. Text or Number?-->
+       Email: <input id="email" required type="email"><br> <!-- Hint: Add the type you want the form field to be here. Oof... what should an email be?-->
        Feedback Message: <textarea id="message"></textarea><br> <!-- Hint: Add the type you want the form field to be here. Textarea?-->
        <button >Submit</button> <!-- Hint: What type of button should this be?-->
    </form>
