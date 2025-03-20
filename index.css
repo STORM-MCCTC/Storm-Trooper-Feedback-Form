@@ -9,6 +9,15 @@ body {
     text-align: center;
 }
 
+
+@keyframes border {
+    0% {border-style: solid; border-color:#000000; border-bottom: 1px; border-right: 1px;}
+    25%{border-color:#3d0000; border-bottom: 2px; border-right: 2px;}
+    50%{border-color:#590000; border-bottom: 3px; border-right: 3px;}
+    75%{border-color:#610000; border-bottom: 4px; border-right: 4px;}
+    100%{border-color:#8b0000; border-bottom: 5px; border-right: 5px;}
+}
+
 form {
     background-color: #383838;
     padding: 15px;
@@ -25,7 +34,11 @@ form {
 
 form:hover{
     border-style: solid;
+    border-bottom: 5px;
+    border-right: 5px;
     border-color: #8b0000;
+    animation-name: border;
+    animation-duration: 1s;
 }
 
 input, textarea {
