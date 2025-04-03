@@ -10,22 +10,56 @@
     <h1>The Galactic Empire</h1>
     <strong>Feedback Form</strong>
     <br><br>
+    
     <form id="feedbackForm">
-      <label for="Agerequired"></label>
-      <label for="nospecialnonum"></label>
-      <label for="phone"></label>
-        Name: <input id="name" required type="text" placeholder="Name" pattern="[A-Za-z]{3,20}" title="No Special Characters, No Numbers" required><br> <!--no checks needed-->
-        Age: <input id="age" id="Agerequired" type="number" min="18" max="100" placeholder="18 or older" required><br> <!--checks if 18 in the JS-->
-        Phone: <input id="phone" name="phone" pattern="^\d{10}$" required type="tel" placeholder="123-456-7890 (Not Required)" pattern="[0,9]{3}-[0,9]{3}-[0,9]{4}" ><br> <!--pattern= is to make sure it is a phone number-->
-        Street: <input id="street" required placeholder="Street"><br>
-        City: <input id="city" required placeholder="City"><br>
-        State: <input id="state" required  placeholder="State"><br>
-        Zip Code: <input id="zip" pattern="^\d{5}$" required placeholder="XXXXX"><br> <!--pattern make it have to be 5 chars -->
-        Email: <input id="email" required type="email" placeholder="name@email.com"><br> <!--type="email" makes it only except emails-->
-        Feedback Message: <textarea id="message"></textarea><br>
-        <button >Submit</button>
-      </form>
+        <label for="name">Name:</label>
+        <input id="name" name="name" required type="text" placeholder="Name" pattern="[A-Za-z]{3,20}" title="No Special Characters, No Numbers"><br>
 
-   <script src="index.js"></script>
+        <label for="age">Age:</label>
+        <input id="age" name="age" type="number" min="18" max="100" placeholder="18 or older" required><br>
+
+        <label for="phone">Phone:</label>
+        <input id="phone" name="phone" type="tel" placeholder="123-456-7890 (Not Required)"><br>
+
+        <label for="street">Street:</label>
+        <input id="street" name="street" required placeholder="Street"><br>
+
+        <label for="city">City:</label>
+        <input id="city" name="city" required placeholder="City"><br>
+
+        <label for="state">State:</label>
+        <input id="state" name="state" required placeholder="State"><br>
+
+        <label for="zip">Zip Code:</label>
+        <input id="zip" name="zip" pattern="^\d{5}$" required placeholder="XXXXX"><br>
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" required type="email" placeholder="name@example.com"><br>
+
+        <label for="message">Feedback Message:</label>
+        <textarea id="message" name="message"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            let phoneInput = document.getElementById("phone").value;
+            let emailInput = document.getElementById("email").value;
+
+            let phonePattern = /^\d{3}-\d{3}-\d{4}$/; // Strict: XXX-XXX-XXXX
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Strict email format
+
+            if (!phonePattern.test(phoneInput)) {
+                alert("Invalid phone number! Please enter in the format: 123-456-7890");
+                event.preventDefault(); // Stops form from submitting
+            }
+
+            if (!emailPattern.test(emailInput)) {
+                alert("Invalid email! Please enter a valid email (e.g., name@example.com)");
+                event.preventDefault(); // Stops form from submitting
+            }
+        });
+    </script>
 </body>
 </html>
